@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors and operating systems
+.DS_Store
+.vscode/
+.idea/
+
+# Generated outputs (keep the directory structure in Git)
+outputs/figures/**/*.png
+outputs/figures/**/*.jpg
+outputs/figures/**/*.jpeg
+outputs/figures/**/*.pdf
+outputs/reports/*
+!outputs/reports/.gitkeep
