@@ -1,0 +1,1991 @@
+{
+  "data_quality": {
+    "rows": 15229,
+    "columns": 15,
+    "dtypes": {
+      "model": "str",
+      "vehicle_age": "int64",
+      "km_driven": "int64",
+      "seller_type": "str",
+      "transmission_type": "str",
+      "mileage": "float64",
+      "engine": "int64",
+      "max_power": "float64",
+      "selling_price": "int64",
+      "real_typical_owner_type": "str",
+      "real_avg_owner_count": "float64",
+      "real_common_trim": "str",
+      "real_new_ex_showroom_price": "float64",
+      "real_body_type": "str",
+      "model_grouped": "str"
+    },
+    "numeric_columns": [
+      "vehicle_age",
+      "km_driven",
+      "mileage",
+      "engine",
+      "max_power",
+      "selling_price",
+      "real_avg_owner_count",
+      "real_new_ex_showroom_price"
+    ],
+    "categorical_columns": [
+      "model",
+      "seller_type",
+      "transmission_type",
+      "real_typical_owner_type",
+      "real_common_trim",
+      "real_body_type",
+      "model_grouped"
+    ],
+    "missing_by_col": {
+      "model": 0,
+      "vehicle_age": 0,
+      "km_driven": 0,
+      "seller_type": 0,
+      "transmission_type": 0,
+      "mileage": 0,
+      "engine": 0,
+      "max_power": 0,
+      "selling_price": 0,
+      "real_typical_owner_type": 0,
+      "real_avg_owner_count": 0,
+      "real_common_trim": 0,
+      "real_new_ex_showroom_price": 0,
+      "real_body_type": 0,
+      "model_grouped": 0
+    },
+    "total_missing": 0,
+    "duplicate_rows": 0,
+    "domain_checks": {
+      "extreme_km_per_year_gt_100k": 0,
+      "zero_vehicle_age_rows": 4,
+      "non_positive_selling_price": 0,
+      "non_positive_km_driven": 0,
+      "non_positive_engine": 0,
+      "non_positive_max_power": 0,
+      "unknown_real_body_type": 5317,
+      "unknown_real_typical_owner_type": 304
+    },
+    "low_sample_ages_lt_30": {
+      "0": 4,
+      "16": 25,
+      "17": 17,
+      "18": 11,
+      "19": 5,
+      "21": 3,
+      "22": 1,
+      "25": 1,
+      "29": 1
+    },
+    "low_sample_body_types_lt_30": {
+      "MPV": 24,
+      "Sports, Convertible": 6,
+      "Pick-up": 6,
+      "Coupe": 4,
+      "Sports": 1
+    },
+    "body_type_counts": {
+      "Unknown": 5317,
+      "Hatchback": 3601,
+      "Sedan": 2839,
+      "SUV": 2819,
+      "MUV": 558,
+      "Crossover, SUV": 54,
+      "MPV": 24,
+      "Sports, Convertible": 6,
+      "Pick-up": 6,
+      "Coupe": 4,
+      "Sports": 1
+    },
+    "seller_type_counts": {
+      "Dealer": 9446,
+      "Individual": 5610,
+      "Trustmark Dealer": 173
+    },
+    "transmission_type_counts": {
+      "Manual": 12083,
+      "Automatic": 3146
+    },
+    "whitespace_issues": {},
+    "case_collisions": {},
+    "numeric_ranges": {
+      "vehicle_age": {
+        "min": 0.0,
+        "p25": 4.0,
+        "median": 6.0,
+        "mean": 6.042419068881739,
+        "p75": 8.0,
+        "max": 29.0,
+        "std": 3.01692316871511
+      },
+      "km_driven": {
+        "min": 100.0,
+        "p25": 30000.0,
+        "median": 50000.0,
+        "mean": 54887.83176833673,
+        "p75": 70000.0,
+        "max": 830000.0,
+        "std": 37065.07988540621
+      },
+      "mileage": {
+        "min": 4.0,
+        "p25": 17.0,
+        "median": 19.67,
+        "mean": 19.69890012476197,
+        "p75": 22.7,
+        "max": 33.54,
+        "std": 4.1689116338048535
+      },
+      "engine": {
+        "min": 793.0,
+        "p25": 1197.0,
+        "median": 1248.0,
+        "mean": 1485.8872545800775,
+        "p75": 1582.0,
+        "max": 6592.0,
+        "std": 520.2526051281623
+      },
+      "max_power": {
+        "min": 38.4,
+        "p25": 74.0,
+        "median": 88.5,
+        "mean": 100.59627618359708,
+        "p75": 117.3,
+        "max": 626.0,
+        "std": 42.920561717499425
+      },
+      "selling_price": {
+        "min": 40000.0,
+        "p25": 385000.0,
+        "median": 556000.0,
+        "mean": 774537.9785278088,
+        "p75": 825000.0,
+        "max": 39500000.0,
+        "std": 894921.7487827443
+      },
+      "real_avg_owner_count": {
+        "min": 1.0,
+        "p25": 1.08,
+        "median": 1.15,
+        "mean": 1.152568783242498,
+        "p75": 1.19,
+        "max": 1.75,
+        "std": 0.0859038186723215
+      },
+      "real_new_ex_showroom_price": {
+        "min": 0.125,
+        "p25": 0.2899599,
+        "median": 0.5195,
+        "mean": 0.49336896429181165,
+        "p75": 0.6415735,
+        "max": 0.99,
+        "std": 0.2380878563803779
+      }
+    },
+    "age_distribution": {
+      "0": 4,
+      "1": 220,
+      "2": 1134,
+      "3": 1896,
+      "4": 2216,
+      "5": 2089,
+      "6": 1901,
+      "7": 1427,
+      "8": 1271,
+      "9": 1014,
+      "10": 706,
+      "11": 541,
+      "12": 293,
+      "13": 234,
+      "14": 129,
+      "15": 90,
+      "16": 25,
+      "17": 17,
+      "18": 11,
+      "19": 5,
+      "21": 3,
+      "22": 1,
+      "25": 1,
+      "29": 1
+    }
+  },
+  "analysis_1": {
+    "age_summary": [
+      {
+        "vehicle_age": 0,
+        "count": 4,
+        "median_price": 525000.0,
+        "mean_price": 1575000.0,
+        "std_price": 2184223.7370135263,
+        "p25_price": 475000.0,
+        "p75_price": 1625000.0,
+        "median_km": 5000.0,
+        "low_sample_flag": true,
+        "age_gap_from_prev": NaN,
+        "prev_median_price": NaN,
+        "yoy_abs_change": NaN,
+        "yoy_pct_change": NaN,
+        "reliable_consecutive_yoy": false
+      },
+      {
+        "vehicle_age": 1,
+        "count": 220,
+        "median_price": 750000.0,
+        "mean_price": 1099236.3636363635,
+        "std_price": 1226621.8928740998,
+        "p25_price": 550000.0,
+        "p75_price": 1056250.0,
+        "median_km": 6001.5,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 525000.0,
+        "yoy_abs_change": 225000.0,
+        "yoy_pct_change": 42.857142857142854,
+        "reliable_consecutive_yoy": false
+      },
+      {
+        "vehicle_age": 2,
+        "count": 1134,
+        "median_price": 818000.0,
+        "mean_price": 1143009.7001763668,
+        "std_price": 1590993.6613463375,
+        "p25_price": 586250.0,
+        "p75_price": 1098000.0,
+        "median_km": 15000.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 750000.0,
+        "yoy_abs_change": 68000.0,
+        "yoy_pct_change": 9.066666666666666,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 3,
+        "count": 1896,
+        "median_price": 748000.0,
+        "mean_price": 977327.0042194093,
+        "std_price": 988596.1596579468,
+        "p25_price": 550000.0,
+        "p75_price": 950000.0,
+        "median_km": 29003.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 818000.0,
+        "yoy_abs_change": -70000.0,
+        "yoy_pct_change": -8.557457212713937,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 4,
+        "count": 2216,
+        "median_price": 695500.0,
+        "mean_price": 949495.9386281589,
+        "std_price": 1034679.8403334863,
+        "p25_price": 518000.0,
+        "p75_price": 911250.0,
+        "median_km": 40000.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 748000.0,
+        "yoy_abs_change": -52500.0,
+        "yoy_pct_change": -7.018716577540108,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 5,
+        "count": 2089,
+        "median_price": 600000.0,
+        "mean_price": 820220.6797510771,
+        "std_price": 807139.3870145526,
+        "p25_price": 450000.0,
+        "p75_price": 789000.0,
+        "median_km": 50000.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 695500.0,
+        "yoy_abs_change": -95500.0,
+        "yoy_pct_change": -13.731128684399712,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 6,
+        "count": 1901,
+        "median_price": 550000.0,
+        "mean_price": 728021.0415570752,
+        "std_price": 668089.2546573386,
+        "p25_price": 450000.0,
+        "p75_price": 700000.0,
+        "median_km": 56562.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 600000.0,
+        "yoy_abs_change": -50000.0,
+        "yoy_pct_change": -8.333333333333332,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 7,
+        "count": 1427,
+        "median_price": 500000.0,
+        "mean_price": 700072.179397337,
+        "std_price": 653949.8350730668,
+        "p25_price": 395000.0,
+        "p75_price": 650000.0,
+        "median_km": 61000.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 550000.0,
+        "yoy_abs_change": -50000.0,
+        "yoy_pct_change": -9.090909090909092,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 8,
+        "count": 1271,
+        "median_price": 450000.0,
+        "mean_price": 627511.4083398898,
+        "std_price": 592864.6043094288,
+        "p25_price": 350000.0,
+        "p75_price": 600000.0,
+        "median_km": 64800.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 500000.0,
+        "yoy_abs_change": -50000.0,
+        "yoy_pct_change": -10.0,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 9,
+        "count": 1014,
+        "median_price": 400000.0,
+        "mean_price": 592262.3274161735,
+        "std_price": 663940.5890928215,
+        "p25_price": 300000.0,
+        "p75_price": 600000.0,
+        "median_km": 68000.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 450000.0,
+        "yoy_abs_change": -50000.0,
+        "yoy_pct_change": -11.11111111111111,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 10,
+        "count": 706,
+        "median_price": 335500.0,
+        "mean_price": 496466.00566572236,
+        "std_price": 511316.381612361,
+        "p25_price": 250000.0,
+        "p75_price": 499750.0,
+        "median_km": 68000.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 400000.0,
+        "yoy_abs_change": -64500.0,
+        "yoy_pct_change": -16.125,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 11,
+        "count": 541,
+        "median_price": 295000.0,
+        "mean_price": 429107.20887245843,
+        "std_price": 418585.9214906281,
+        "p25_price": 220000.0,
+        "p75_price": 400000.0,
+        "median_km": 72000.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 335500.0,
+        "yoy_abs_change": -40500.0,
+        "yoy_pct_change": -12.071535022354695,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 12,
+        "count": 293,
+        "median_price": 260000.0,
+        "mean_price": 318290.10238907847,
+        "std_price": 248375.40867521198,
+        "p25_price": 180000.0,
+        "p75_price": 330000.0,
+        "median_km": 70000.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 295000.0,
+        "yoy_abs_change": -35000.0,
+        "yoy_pct_change": -11.864406779661017,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 13,
+        "count": 234,
+        "median_price": 210000.0,
+        "mean_price": 273940.17094017094,
+        "std_price": 218313.58281026784,
+        "p25_price": 150000.0,
+        "p75_price": 300000.0,
+        "median_km": 79000.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 260000.0,
+        "yoy_abs_change": -50000.0,
+        "yoy_pct_change": -19.230769230769234,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 14,
+        "count": 129,
+        "median_price": 190000.0,
+        "mean_price": 260682.17054263566,
+        "std_price": 214189.7152823915,
+        "p25_price": 120000.0,
+        "p75_price": 300000.0,
+        "median_km": 76600.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 210000.0,
+        "yoy_abs_change": -20000.0,
+        "yoy_pct_change": -9.523809523809524,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 15,
+        "count": 90,
+        "median_price": 142500.0,
+        "mean_price": 188376.38888888888,
+        "std_price": 142691.4450421533,
+        "p25_price": 100000.0,
+        "p75_price": 238750.0,
+        "median_km": 80000.0,
+        "low_sample_flag": false,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 190000.0,
+        "yoy_abs_change": -47500.0,
+        "yoy_pct_change": -25.0,
+        "reliable_consecutive_yoy": true
+      },
+      {
+        "vehicle_age": 16,
+        "count": 25,
+        "median_price": 100000.0,
+        "mean_price": 126240.0,
+        "std_price": 81354.30740491454,
+        "p25_price": 80000.0,
+        "p75_price": 125000.0,
+        "median_km": 84000.0,
+        "low_sample_flag": true,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 142500.0,
+        "yoy_abs_change": -42500.0,
+        "yoy_pct_change": -29.82456140350877,
+        "reliable_consecutive_yoy": false
+      },
+      {
+        "vehicle_age": 17,
+        "count": 17,
+        "median_price": 110000.0,
+        "mean_price": 156470.58823529413,
+        "std_price": 139604.85201411287,
+        "p25_price": 80000.0,
+        "p75_price": 145000.0,
+        "median_km": 80000.0,
+        "low_sample_flag": true,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 100000.0,
+        "yoy_abs_change": 10000.0,
+        "yoy_pct_change": 10.0,
+        "reliable_consecutive_yoy": false
+      },
+      {
+        "vehicle_age": 18,
+        "count": 11,
+        "median_price": 100000.0,
+        "mean_price": 125000.0,
+        "std_price": 65153.6645170477,
+        "p25_price": 77500.0,
+        "p75_price": 150000.0,
+        "median_km": 120000.0,
+        "low_sample_flag": true,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 110000.0,
+        "yoy_abs_change": -10000.0,
+        "yoy_pct_change": -9.090909090909092,
+        "reliable_consecutive_yoy": false
+      },
+      {
+        "vehicle_age": 19,
+        "count": 5,
+        "median_price": 80000.0,
+        "mean_price": 74000.0,
+        "std_price": 23021.728866442678,
+        "p25_price": 50000.0,
+        "p75_price": 90000.0,
+        "median_km": 110000.0,
+        "low_sample_flag": true,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 100000.0,
+        "yoy_abs_change": -20000.0,
+        "yoy_pct_change": -20.0,
+        "reliable_consecutive_yoy": false
+      },
+      {
+        "vehicle_age": 21,
+        "count": 3,
+        "median_price": 85000.0,
+        "mean_price": 73333.33333333333,
+        "std_price": 29297.32638541158,
+        "p25_price": 62500.0,
+        "p75_price": 90000.0,
+        "median_km": 83000.0,
+        "low_sample_flag": true,
+        "age_gap_from_prev": 2.0,
+        "prev_median_price": 80000.0,
+        "yoy_abs_change": 5000.0,
+        "yoy_pct_change": 6.25,
+        "reliable_consecutive_yoy": false
+      },
+      {
+        "vehicle_age": 22,
+        "count": 1,
+        "median_price": 70000.0,
+        "mean_price": 70000.0,
+        "std_price": NaN,
+        "p25_price": 70000.0,
+        "p75_price": 70000.0,
+        "median_km": 70000.0,
+        "low_sample_flag": true,
+        "age_gap_from_prev": 1.0,
+        "prev_median_price": 85000.0,
+        "yoy_abs_change": -15000.0,
+        "yoy_pct_change": -17.647058823529413,
+        "reliable_consecutive_yoy": false
+      },
+      {
+        "vehicle_age": 25,
+        "count": 1,
+        "median_price": 1000000.0,
+        "mean_price": 1000000.0,
+        "std_price": NaN,
+        "p25_price": 1000000.0,
+        "p75_price": 1000000.0,
+        "median_km": 50000.0,
+        "low_sample_flag": true,
+        "age_gap_from_prev": 3.0,
+        "prev_median_price": 70000.0,
+        "yoy_abs_change": 930000.0,
+        "yoy_pct_change": 1328.5714285714287,
+        "reliable_consecutive_yoy": false
+      },
+      {
+        "vehicle_age": 29,
+        "count": 1,
+        "median_price": 60000.0,
+        "mean_price": 60000.0,
+        "std_price": NaN,
+        "p25_price": 60000.0,
+        "p75_price": 60000.0,
+        "median_km": 22612.0,
+        "low_sample_flag": true,
+        "age_gap_from_prev": 4.0,
+        "prev_median_price": 1000000.0,
+        "yoy_abs_change": -940000.0,
+        "yoy_pct_change": -94.0,
+        "reliable_consecutive_yoy": false
+      }
+    ],
+    "reliable_age_range": [
+      1,
+      15
+    ],
+    "reliable_row_count": 15161,
+    "excluded_low_sample_row_count": 68,
+    "largest_reliable_yoy_decline": {
+      "vehicle_age": 15,
+      "count": 90,
+      "median_price": 142500.0,
+      "mean_price": 188376.38888888888,
+      "std_price": 142691.4450421533,
+      "p25_price": 100000.0,
+      "p75_price": 238750.0,
+      "median_km": 80000.0,
+      "low_sample_flag": false,
+      "age_gap_from_prev": 1.0,
+      "prev_median_price": 190000.0,
+      "yoy_abs_change": -47500.0,
+      "yoy_pct_change": -25.0,
+      "reliable_consecutive_yoy": true
+    },
+    "age_25_investigation": {
+      "age_25_count": 1,
+      "age_25_records": [
+        {
+          "model": "3",
+          "vehicle_age": 25,
+          "km_driven": 50000,
+          "seller_type": "Individual",
+          "transmission_type": "Automatic",
+          "mileage": 11.9,
+          "engine": 1995,
+          "max_power": 154.0,
+          "selling_price": 1000000,
+          "real_typical_owner_type": "First",
+          "real_avg_owner_count": 1.26,
+          "real_common_trim": "Series 320d",
+          "real_new_ex_showroom_price": 0.5195,
+          "real_body_type": "SUV",
+          "model_grouped": "3"
+        }
+      ],
+      "neighbor_comparison": [
+        {
+          "vehicle_age": 21,
+          "count": 3,
+          "median_price": 85000.0,
+          "mean_price": 73333.33333333333,
+          "models": [
+            "Wagon R"
+          ]
+        },
+        {
+          "vehicle_age": 22,
+          "count": 1,
+          "median_price": 70000.0,
+          "mean_price": 70000.0,
+          "models": [
+            "City"
+          ]
+        },
+        {
+          "vehicle_age": 24,
+          "count": 0,
+          "median_price": null,
+          "mean_price": null,
+          "models": []
+        },
+        {
+          "vehicle_age": 25,
+          "count": 1,
+          "median_price": 1000000.0,
+          "mean_price": 1000000.0,
+          "models": [
+            "3"
+          ]
+        },
+        {
+          "vehicle_age": 26,
+          "count": 0,
+          "median_price": null,
+          "mean_price": null,
+          "models": []
+        },
+        {
+          "vehicle_age": 29,
+          "count": 1,
+          "median_price": 60000.0,
+          "mean_price": 60000.0,
+          "models": [
+            "Alto"
+          ]
+        }
+      ],
+      "model_3_total_count": 152,
+      "model_3_other_max_age": 13,
+      "model_3_other_median_age": 7.0,
+      "model_3_other_median_price": 1650000.0,
+      "recommendation": "RETAIN in master dataset with explicit data-quality flag; EXCLUDE from primary age-curve milestones and reliable-age regression models (n = 1 < 30 threshold, and record exhibits both a probable clerical age error and a body-type enrichment mismatch)."
+    },
+    "regression_reliable": [
+      {
+        "subset": "Reliable Ages (n >= 30, ages 1-15)",
+        "model": "Linear OLS (Price ~ Age)",
+        "formula": "selling_price ~ vehicle_age",
+        "n_obs": 15161,
+        "is_log_model": false,
+        "r2_price_scale": 0.05647864220188481,
+        "rmse_inr": 869624.1077164025,
+        "mae_inr": 427154.9122859948,
+        "log_r2": null,
+        "log_adj_r2": null,
+        "log_rmse": null,
+        "aic": 457707.1571794953,
+        "params": {
+          "Intercept": 1213181.5312437774,
+          "vehicle_age": -72749.0656683452
+        },
+        "pvalues": {
+          "Intercept": 0.0,
+          "vehicle_age": 2.007718545481927e-205
+        }
+      },
+      {
+        "subset": "Reliable Ages (n >= 30, ages 1-15)",
+        "model": "Polynomial Deg 2 (Price ~ Age + Age^2)",
+        "formula": "selling_price ~ vehicle_age + age_sq",
+        "n_obs": 15161,
+        "is_log_model": false,
+        "r2_price_scale": 0.05678819201466545,
+        "rmse_inr": 869481.4431862312,
+        "mae_inr": 426637.4901100066,
+        "log_r2": null,
+        "log_adj_r2": null,
+        "log_rmse": null,
+        "aic": 457704.18235333683,
+        "params": {
+          "Intercept": 1271895.8325055242,
+          "vehicle_age": -93629.496792614,
+          "age_sq": 1493.8285287725903
+        },
+        "pvalues": {
+          "Intercept": 9.141841220537582e-208,
+          "vehicle_age": 2.559898209491137e-17,
+          "age_sq": 0.022642184109605244
+        }
+      },
+      {
+        "subset": "Reliable Ages (n >= 30, ages 1-15)",
+        "model": "Polynomial Deg 3 (Price ~ Age + Age^2 + Age^3)",
+        "formula": "selling_price ~ vehicle_age + age_sq + age_cu",
+        "n_obs": 15161,
+        "is_log_model": false,
+        "r2_price_scale": 0.05685794598233629,
+        "rmse_inr": 869449.2919232143,
+        "mae_inr": 426678.32593881176,
+        "log_r2": null,
+        "log_adj_r2": null,
+        "log_rmse": null,
+        "aic": 457705.06110039947,
+        "params": {
+          "Intercept": 1319061.6475002454,
+          "vehicle_age": -120532.31425981568,
+          "age_sq": 5686.5426121814135,
+          "age_cu": -187.50542145051662
+        },
+        "pvalues": {
+          "Intercept": 4.225977790831305e-68,
+          "vehicle_age": 0.0002833527529617627,
+          "age_sq": 0.19224420046963042,
+          "age_cu": 0.2779968445833614
+        }
+      },
+      {
+        "subset": "Reliable Ages (n >= 30, ages 1-15)",
+        "model": "Log-Linear OLS (log(Price) ~ Age)",
+        "formula": "log_price ~ vehicle_age",
+        "n_obs": 15161,
+        "is_log_model": true,
+        "r2_price_scale": 0.05597499451538479,
+        "rmse_inr": 869856.1775754626,
+        "mae_inr": 427540.54654807557,
+        "log_r2": 0.21940355478173124,
+        "log_adj_r2": 0.219352060854347,
+        "log_rmse": 0.5993636369788253,
+        "aic": 27507.622907699613,
+        "params": {
+          "Intercept": 13.937367565794583,
+          "vehicle_age": -0.10864969951169295
+        },
+        "pvalues": {
+          "Intercept": 0.0,
+          "vehicle_age": 0.0
+        }
+      },
+      {
+        "subset": "Reliable Ages (n >= 30, ages 1-15)",
+        "model": "Piecewise Log-Linear (knots at Age 5 & 10)",
+        "formula": "log_price ~ vehicle_age + age_gt5 + age_gt10",
+        "n_obs": 15161,
+        "is_log_model": true,
+        "r2_price_scale": 0.056790296147764985,
+        "rmse_inr": 869480.4733586225,
+        "mae_inr": 425804.7642902849,
+        "log_r2": 0.22679994736775055,
+        "log_adj_r2": 0.22664690915716157,
+        "log_rmse": 0.5965173005955304,
+        "aic": 27367.28282821934,
+        "params": {
+          "Intercept": 13.821634544496026,
+          "vehicle_age": -0.08131995116592626,
+          "age_gt5": -0.018852021093282514,
+          "age_gt10": -0.08983139733187212
+        },
+        "pvalues": {
+          "Intercept": 0.0,
+          "vehicle_age": 7.075029187258624e-48,
+          "age_gt5": 0.01984143435885668,
+          "age_gt10": 7.015863102011541e-18
+        }
+      }
+    ],
+    "regression_all_sensitivity": [
+      {
+        "subset": "All Ages (ages 0-29, sensitivity)",
+        "model": "Linear OLS (Price ~ Age)",
+        "formula": "selling_price ~ vehicle_age",
+        "n_obs": 15229,
+        "is_log_model": false,
+        "r2_price_scale": 0.058471951886656326,
+        "rmse_inr": 868335.2558310182,
+        "mae_inr": 426465.1331222188,
+        "log_r2": null,
+        "log_adj_r2": null,
+        "log_rmse": null,
+        "aic": 459719.53099230793,
+        "params": {
+          "Intercept": 1206884.8259433846,
+          "vehicle_age": -71551.94674301031
+        },
+        "pvalues": {
+          "Intercept": 0.0,
+          "vehicle_age": 2.8378394046156976e-217
+        }
+      },
+      {
+        "subset": "All Ages (ages 0-29, sensitivity)",
+        "model": "Polynomial Deg 2 (Price ~ Age + Age^2)",
+        "formula": "selling_price ~ vehicle_age + age_sq",
+        "n_obs": 15229,
+        "is_log_model": false,
+        "r2_price_scale": 0.05885606152142575,
+        "rmse_inr": 868158.1129603117,
+        "mae_inr": 425530.4188375871,
+        "log_r2": null,
+        "log_adj_r2": null,
+        "log_rmse": null,
+        "aic": 459710.80239449255,
+        "params": {
+          "Intercept": 1281903.0817558428,
+          "vehicle_age": -97262.66226787405,
+          "age_sq": 1761.3032406360194
+        },
+        "pvalues": {
+          "Intercept": 3.972225159366669e-269,
+          "vehicle_age": 7.986758642521005e-27,
+          "age_sq": 0.0003904496729083763
+        }
+      },
+      {
+        "subset": "All Ages (ages 0-29, sensitivity)",
+        "model": "Polynomial Deg 3 (Price ~ Age + Age^2 + Age^3)",
+        "formula": "selling_price ~ vehicle_age + age_sq + age_cu",
+        "n_obs": 15229,
+        "is_log_model": false,
+        "r2_price_scale": 0.058849462263585006,
+        "rmse_inr": 868161.1566972772,
+        "mae_inr": 425517.47427552374,
+        "log_r2": null,
+        "log_adj_r2": null,
+        "log_rmse": null,
+        "aic": 459712.76181804057,
+        "params": {
+          "Intercept": 1275989.3775822236,
+          "vehicle_age": -94299.35599574256,
+          "age_sq": 1364.7179712238074,
+          "age_cu": 14.927272018807297
+        },
+        "pvalues": {
+          "Intercept": 1.488527960766258e-118,
+          "vehicle_age": 1.4945880345981853e-06,
+          "age_sq": 0.5039252388458135,
+          "age_cu": 0.8152586633329328
+        }
+      },
+      {
+        "subset": "All Ages (ages 0-29, sensitivity)",
+        "model": "Log-Linear OLS (log(Price) ~ Age)",
+        "formula": "log_price ~ vehicle_age",
+        "n_obs": 15229,
+        "is_log_model": true,
+        "r2_price_scale": 0.057868895624910044,
+        "rmse_inr": 868613.2991617016,
+        "mae_inr": 426981.9899237285,
+        "log_r2": 0.23618726900165976,
+        "log_adj_r2": 0.23613710726717507,
+        "log_rmse": 0.6003523316495001,
+        "aic": 27681.18327534079,
+        "params": {
+          "Intercept": 13.947619540377676,
+          "vehicle_age": -0.11066008681116594
+        },
+        "pvalues": {
+          "Intercept": 0.0,
+          "vehicle_age": 0.0
+        }
+      },
+      {
+        "subset": "All Ages (ages 0-29, sensitivity)",
+        "model": "Piecewise Log-Linear (knots at Age 5 & 10)",
+        "formula": "log_price ~ vehicle_age + age_gt5 + age_gt10",
+        "n_obs": 15229,
+        "is_log_model": true,
+        "r2_price_scale": 0.058835280047754845,
+        "rmse_inr": 868167.6978413461,
+        "mae_inr": 425147.1096518188,
+        "log_r2": 0.24401113214241554,
+        "log_adj_r2": 0.2438621688186997,
+        "log_rmse": 0.5972696619576364,
+        "aic": 27528.38561909337,
+        "params": {
+          "Intercept": 13.818090934238876,
+          "vehicle_age": -0.08012847927868147,
+          "age_gt5": -0.022569417150344204,
+          "age_gt10": -0.07507545609571334
+        },
+        "pvalues": {
+          "Intercept": 0.0,
+          "vehicle_age": 3.746925257169319e-46,
+          "age_gt5": 0.00603816475466599,
+          "age_gt10": 8.158011277376217e-11
+        }
+      }
+    ],
+    "multivariate_age_control": {
+      "n_obs": 15161,
+      "r2": 0.9228571640035002,
+      "adj_r2": 0.922365547417224,
+      "vehicle_age_coef": -0.11205691485932437,
+      "vehicle_age_se": 0.0009391605787055774,
+      "vehicle_age_pval": 0.0,
+      "vehicle_age_pct_effect_per_year": -10.600662545477624,
+      "vehicle_age_ci95": [
+        -0.11389763576928709,
+        -0.11021619394936165
+      ]
+    },
+    "charts": [
+      "C:\\Users\\USER\\OneDrive - Cambodia Academy of Digital Technology\\Car_Sale_Analysis\\car_price_prediction\\Car_Sale_Analysis\\outputs\\advanced_analysis\\depreciation_curve.png",
+      "C:\\Users\\USER\\OneDrive - Cambodia Academy of Digital Technology\\Car_Sale_Analysis\\car_price_prediction\\Car_Sale_Analysis\\outputs\\advanced_analysis\\vehicle_age_sample_size.png",
+      "C:\\Users\\USER\\OneDrive - Cambodia Academy of Digital Technology\\Car_Sale_Analysis\\car_price_prediction\\Car_Sale_Analysis\\outputs\\advanced_analysis\\annual_price_change.png",
+      "C:\\Users\\USER\\OneDrive - Cambodia Academy of Digital Technology\\Car_Sale_Analysis\\car_price_prediction\\Car_Sale_Analysis\\outputs\\advanced_analysis\\age_25_anomaly.png"
+    ]
+  },
+  "analysis_2": {
+    "total_rows": 15229,
+    "major_body_types_rows": 9817,
+    "excluded_rows": 5412,
+    "coverage_table": [
+      {
+        "real_body_type": "Unknown",
+        "Manual": 4428,
+        "Automatic": 889,
+        "Total": 5317,
+        "Median_Price": 490000.0,
+        "Mean_Price": 649351.1143501975,
+        "Included_In_Main_Analysis": false,
+        "Status_Reason": "Excluded: Unknown/missing body type label"
+      },
+      {
+        "real_body_type": "Hatchback",
+        "Manual": 3240,
+        "Automatic": 361,
+        "Total": 3601,
+        "Median_Price": 435000.0,
+        "Mean_Price": 458008.88642043876,
+        "Included_In_Main_Analysis": true,
+        "Status_Reason": "Included (major body type with both transmissions, n >= 84 per cell)"
+      },
+      {
+        "real_body_type": "Sedan",
+        "Manual": 1791,
+        "Automatic": 1048,
+        "Total": 2839,
+        "Median_Price": 625000.0,
+        "Mean_Price": 926857.3441352589,
+        "Included_In_Main_Analysis": true,
+        "Status_Reason": "Included (major body type with both transmissions, n >= 84 per cell)"
+      },
+      {
+        "real_body_type": "SUV",
+        "Manual": 2120,
+        "Automatic": 699,
+        "Total": 2819,
+        "Median_Price": 880000.0,
+        "Mean_Price": 1120392.3377084073,
+        "Included_In_Main_Analysis": true,
+        "Status_Reason": "Included (major body type with both transmissions, n >= 84 per cell)"
+      },
+      {
+        "real_body_type": "MUV",
+        "Manual": 474,
+        "Automatic": 84,
+        "Total": 558,
+        "Median_Price": 1077500.0,
+        "Mean_Price": 1180259.8566308243,
+        "Included_In_Main_Analysis": true,
+        "Status_Reason": "Included (major body type with both transmissions, n >= 84 per cell)"
+      },
+      {
+        "real_body_type": "Crossover, SUV",
+        "Manual": 0,
+        "Automatic": 54,
+        "Total": 54,
+        "Median_Price": 2125000.0,
+        "Mean_Price": 2064351.851851852,
+        "Included_In_Main_Analysis": false,
+        "Status_Reason": "Excluded: Only one transmission type observed (no within-body comparison)"
+      },
+      {
+        "real_body_type": "MPV",
+        "Manual": 24,
+        "Automatic": 0,
+        "Total": 24,
+        "Median_Price": 1070000.0,
+        "Mean_Price": 1093375.0,
+        "Included_In_Main_Analysis": false,
+        "Status_Reason": "Excluded: Only one transmission type observed (no within-body comparison)"
+      },
+      {
+        "real_body_type": "Sports, Convertible",
+        "Manual": 0,
+        "Automatic": 6,
+        "Total": 6,
+        "Median_Price": 3712000.0,
+        "Mean_Price": 4479000.0,
+        "Included_In_Main_Analysis": false,
+        "Status_Reason": "Excluded: Only one transmission type observed (no within-body comparison)"
+      },
+      {
+        "real_body_type": "Pick-up",
+        "Manual": 6,
+        "Automatic": 0,
+        "Total": 6,
+        "Median_Price": 1225000.0,
+        "Mean_Price": 1223333.3333333333,
+        "Included_In_Main_Analysis": false,
+        "Status_Reason": "Excluded: Only one transmission type observed (no within-body comparison)"
+      },
+      {
+        "real_body_type": "Coupe",
+        "Manual": 0,
+        "Automatic": 4,
+        "Total": 4,
+        "Median_Price": 11300000.0,
+        "Mean_Price": 16825000.0,
+        "Included_In_Main_Analysis": false,
+        "Status_Reason": "Excluded: Only one transmission type observed (no within-body comparison)"
+      },
+      {
+        "real_body_type": "Sports",
+        "Manual": 0,
+        "Automatic": 1,
+        "Total": 1,
+        "Median_Price": 6000000.0,
+        "Mean_Price": 6000000.0,
+        "Included_In_Main_Analysis": false,
+        "Status_Reason": "Excluded: Only one transmission type observed (no within-body comparison)"
+      }
+    ],
+    "cell_stats": [
+      {
+        "real_body_type": "Hatchback",
+        "transmission_type": "Automatic",
+        "count": 361,
+        "median_price": 550000.0,
+        "mean_price": 621260.3878116343,
+        "std_price": 416900.4528246578,
+        "p25_price": 425000.0,
+        "p75_price": 675000.0,
+        "median_age": 4.0,
+        "median_engine": 1197.0
+      },
+      {
+        "real_body_type": "Hatchback",
+        "transmission_type": "Manual",
+        "count": 3240,
+        "median_price": 425000.0,
+        "mean_price": 439819.44444444444,
+        "std_price": 185612.61382993782,
+        "p25_price": 300000.0,
+        "p75_price": 550000.0,
+        "median_age": 5.0,
+        "median_engine": 1197.0
+      },
+      {
+        "real_body_type": "MUV",
+        "transmission_type": "Automatic",
+        "count": 84,
+        "median_price": 1800000.0,
+        "mean_price": 1859083.3333333333,
+        "std_price": 383881.85959812434,
+        "p25_price": 1649750.0,
+        "p75_price": 1946250.0,
+        "median_age": 4.0,
+        "median_engine": 2755.0
+      },
+      {
+        "real_body_type": "MUV",
+        "transmission_type": "Manual",
+        "count": 474,
+        "median_price": 950000.0,
+        "mean_price": 1059962.0253164556,
+        "std_price": 467078.5667970827,
+        "p25_price": 675000.0,
+        "p75_price": 1450000.0,
+        "median_age": 7.0,
+        "median_engine": 2494.0
+      },
+      {
+        "real_body_type": "SUV",
+        "transmission_type": "Automatic",
+        "count": 699,
+        "median_price": 1450000.0,
+        "mean_price": 1966908.4406294706,
+        "std_price": 1430211.26845203,
+        "p25_price": 1054500.0,
+        "p75_price": 2550000.0,
+        "median_age": 5.0,
+        "median_engine": 1995.0
+      },
+      {
+        "real_body_type": "SUV",
+        "transmission_type": "Manual",
+        "count": 2120,
+        "median_price": 800000.0,
+        "mean_price": 841281.6037735849,
+        "std_price": 399303.2067389506,
+        "p25_price": 575000.0,
+        "p75_price": 995250.0,
+        "median_age": 5.0,
+        "median_engine": 1591.0
+      },
+      {
+        "real_body_type": "Sedan",
+        "transmission_type": "Automatic",
+        "count": 1048,
+        "median_price": 1125000.0,
+        "mean_price": 1559929.3893129772,
+        "std_price": 1319851.5135923454,
+        "p25_price": 690000.0,
+        "p75_price": 1896250.0,
+        "median_age": 6.0,
+        "median_engine": 1798.0
+      },
+      {
+        "real_body_type": "Sedan",
+        "transmission_type": "Manual",
+        "count": 1791,
+        "median_price": 525000.0,
+        "mean_price": 556416.5270798437,
+        "std_price": 227985.89497534407,
+        "p25_price": 399000.0,
+        "p75_price": 675000.0,
+        "median_age": 7.0,
+        "median_engine": 1498.0
+      }
+    ],
+    "premium_table": [
+      {
+        "real_body_type": "Hatchback",
+        "manual_n": 3240,
+        "automatic_n": 361,
+        "total_n": 3601,
+        "manual_median_price": 425000.0,
+        "automatic_median_price": 550000.0,
+        "manual_mean_price": 439819.44444444444,
+        "automatic_mean_price": 621260.3878116343,
+        "median_diff_inr": 125000.0,
+        "median_pct_premium": 29.41176470588236
+      },
+      {
+        "real_body_type": "Sedan",
+        "manual_n": 1791,
+        "automatic_n": 1048,
+        "total_n": 2839,
+        "manual_median_price": 525000.0,
+        "automatic_median_price": 1125000.0,
+        "manual_mean_price": 556416.5270798437,
+        "automatic_mean_price": 1559929.3893129772,
+        "median_diff_inr": 600000.0,
+        "median_pct_premium": 114.28571428571428
+      },
+      {
+        "real_body_type": "SUV",
+        "manual_n": 2120,
+        "automatic_n": 699,
+        "total_n": 2819,
+        "manual_median_price": 800000.0,
+        "automatic_median_price": 1450000.0,
+        "manual_mean_price": 841281.6037735849,
+        "automatic_mean_price": 1966908.4406294706,
+        "median_diff_inr": 650000.0,
+        "median_pct_premium": 81.25
+      },
+      {
+        "real_body_type": "MUV",
+        "manual_n": 474,
+        "automatic_n": 84,
+        "total_n": 558,
+        "manual_median_price": 950000.0,
+        "automatic_median_price": 1800000.0,
+        "manual_mean_price": 1059962.0253164556,
+        "automatic_mean_price": 1859083.3333333333,
+        "median_diff_inr": 850000.0,
+        "median_pct_premium": 89.4736842105263
+      }
+    ],
+    "regression": {
+      "n_obs": 9817,
+      "r2": 0.9183358824597829,
+      "adj_r2": 0.9176986675795923,
+      "rmse_log": 0.18997728229028496,
+      "joint_interaction_f_test": {
+        "f_stat": 2.861241739027296,
+        "df_num": 3,
+        "df_denom": 9740,
+        "p_value": 0.03542283442676592
+      },
+      "key_coefficients": {
+        "Intercept": {
+          "coef": 12.94293693916369,
+          "hc3_se": 0.029414175537061688,
+          "t_stat": 440.023787947266,
+          "p_value": 0.0,
+          "ci95_low": 12.88528621447611,
+          "ci95_high": 13.00058766385127,
+          "pct_effect": 41787371.39401272,
+          "pct_ci95_low": 39446420.47441502,
+          "pct_ci95_high": 44267245.87751562
+        },
+        "C(transmission_type, Treatment(reference='Manual'))[T.Automatic]": {
+          "coef": 0.12974491284696238,
+          "hc3_se": 0.00946297408657303,
+          "t_stat": 13.710796591005868,
+          "p_value": 8.749196603677832e-43,
+          "ci95_low": 0.11119782445064343,
+          "ci95_high": 0.14829200124328135,
+          "pct_effect": 13.853791988284225,
+          "pct_ci95_low": 11.761597675385316,
+          "pct_ci95_high": 15.985152500789933
+        },
+        "C(real_body_type, Treatment(reference='Hatchback'))[T.MUV]": {
+          "coef": 0.862338992708945,
+          "hc3_se": 0.016783668254551357,
+          "t_stat": 51.37964952775433,
+          "p_value": 0.0,
+          "ci95_low": 0.8294436074015561,
+          "ci95_high": 0.8952343780163339,
+          "pct_effect": 136.86945786737965,
+          "pct_ci95_low": 129.20431095998657,
+          "pct_ci95_high": 144.79094583950155
+        },
+        "C(real_body_type, Treatment(reference='Hatchback'))[T.SUV]": {
+          "coef": 1.748836943081808,
+          "hc3_se": 0.032674633704050826,
+          "t_stat": 53.5227711784569,
+          "p_value": 0.0,
+          "ci95_low": 1.68479583781383,
+          "ci95_high": 1.8128780483497862,
+          "pct_effect": 474.79136361730053,
+          "pct_ci95_low": 439.1350110155301,
+          "pct_ci95_high": 512.8058926588963
+        },
+        "C(real_body_type, Treatment(reference='Hatchback'))[T.Sedan]": {
+          "coef": 1.2769330473127432,
+          "hc3_se": 0.021714109547667712,
+          "t_stat": 58.806604273114075,
+          "p_value": 0.0,
+          "ci95_low": 1.234374174642957,
+          "ci95_high": 1.3194919199825292,
+          "pct_effect": 258.56258997723495,
+          "pct_ci95_low": 243.6227369432472,
+          "pct_ci95_high": 274.15199027536084
+        },
+        "C(seller_type, Treatment(reference='Individual'))[T.Dealer]": {
+          "coef": 0.052851345123758,
+          "hc3_se": 0.004704959963007944,
+          "t_stat": 11.233112617172926,
+          "p_value": 2.804224696169162e-29,
+          "ci95_low": 0.043629793047559526,
+          "ci95_high": 0.06207289719995647,
+          "pct_effect": 5.427291066091411,
+          "pct_ci95_low": 4.459556675573184,
+          "pct_ci95_high": 6.403990743084109
+        },
+        "C(seller_type, Treatment(reference='Individual'))[T.Trustmark Dealer]": {
+          "coef": -0.002003105610777489,
+          "hc3_se": 0.019562639620469665,
+          "t_stat": -0.10239444418745562,
+          "p_value": 0.9184435933912336,
+          "ci95_low": -0.04034517470943434,
+          "ci95_high": 0.036338963487879364,
+          "pct_effect": -0.2001100733617145,
+          "pct_ci95_low": -3.954214383284127,
+          "pct_ci95_high": 3.7007294533042856
+        },
+        "C(transmission_type, Treatment(reference='Manual'))[T.Automatic]:C(real_body_type, Treatment(reference='Hatchback'))[T.MUV]": {
+          "coef": -0.037896101316533426,
+          "hc3_se": 0.020833762223647096,
+          "t_stat": -1.8189754164286247,
+          "p_value": 0.06891518072764032,
+          "ci95_low": -0.07872952493735284,
+          "ci95_high": 0.0029373223042859914,
+          "pct_effect": -3.718702930529316,
+          "pct_ci95_low": -7.571011199552958,
+          "pct_ci95_high": 0.2941640462351236
+        },
+        "C(transmission_type, Treatment(reference='Manual'))[T.Automatic]:C(real_body_type, Treatment(reference='Hatchback'))[T.SUV]": {
+          "coef": 0.008687080913316714,
+          "hc3_se": 0.01573181853340648,
+          "t_stat": 0.5521981387510743,
+          "p_value": 0.5808126094407402,
+          "ci95_low": -0.022146716823479722,
+          "ci95_high": 0.03952087865011315,
+          "pct_effect": 0.8724923100722259,
+          "pct_ci95_low": -2.1903278720476926,
+          "pct_ci95_high": 4.031221897304249
+        },
+        "C(transmission_type, Treatment(reference='Manual'))[T.Automatic]:C(real_body_type, Treatment(reference='Hatchback'))[T.Sedan]": {
+          "coef": 0.025528325805138086,
+          "hc3_se": 0.014436904700791856,
+          "t_stat": 1.7682686375104957,
+          "p_value": 0.07701600436439418,
+          "ci95_low": -0.0027674874566509557,
+          "ci95_high": 0.053824139066927124,
+          "pct_effect": 2.5856964083363687,
+          "pct_ci95_low": -0.27636614934883896,
+          "pct_ci95_high": 5.529899996866616
+        },
+        "vehicle_age": {
+          "coef": -0.12376101433208052,
+          "hc3_se": 0.001376689629171579,
+          "t_stat": -89.89754241597181,
+          "p_value": 0.0,
+          "ci95_low": -0.1264592764231466,
+          "ci95_high": -0.12106275224101443,
+          "pct_effect": -11.640901876719523,
+          "pct_ci95_low": -11.878996516260054,
+          "pct_ci95_high": -11.40216392792086
+        },
+        "km_driven": {
+          "coef": -5.697018602515288e-07,
+          "hc3_se": 7.936082238719616e-08,
+          "t_stat": -7.1786284858792335,
+          "p_value": 7.041419811989324e-13,
+          "ci95_low": -7.252462139139133e-07,
+          "ci95_high": -4.1415750658914424e-07,
+          "pct_effect": -5.697016979278047e-05,
+          "pct_ci95_low": -7.252459509610176e-05,
+          "pct_ci95_high": -4.141574208027521e-05
+        },
+        "engine": {
+          "coef": 0.00017615541323288806,
+          "hc3_se": 2.2233777492012936e-05,
+          "t_stat": 7.922873802985955,
+          "p_value": 2.3208309420948834e-15,
+          "ci95_low": 0.0001325780101082654,
+          "ci95_high": 0.00021973281635751071,
+          "pct_effect": 0.017617092950872326,
+          "pct_ci95_low": 0.013258679896099856,
+          "pct_ci95_high": 0.021975695938114548
+        }
+      },
+      "adjusted_auto_premium_by_body": [
+        {
+          "real_body_type": "Hatchback",
+          "log_effect": 0.12974491284696238,
+          "hc3_se": 0.00946297408657303,
+          "p_value": 8.749196603677832e-43,
+          "adj_pct_premium": 13.853791988284225,
+          "adj_pct_ci95_low": 11.761597675385316,
+          "adj_pct_ci95_high": 15.985152500789933
+        },
+        {
+          "real_body_type": "Sedan",
+          "log_effect": 0.15527323865210046,
+          "hc3_se": 0.011045880098414208,
+          "p_value": 6.966613239587988e-45,
+          "adj_pct_premium": 16.79770539848007,
+          "adj_pct_ci95_low": 14.296265499274874,
+          "adj_pct_ci95_high": 19.35389075714542
+        },
+        {
+          "real_body_type": "SUV",
+          "log_effect": 0.1384319937602791,
+          "hc3_se": 0.012545796181800779,
+          "p_value": 2.615596233405249e-28,
+          "adj_pct_premium": 14.847157568107638,
+          "adj_pct_ci95_low": 12.057582772809926,
+          "adj_pct_ci95_high": 17.70617637019192
+        },
+        {
+          "real_body_type": "MUV",
+          "log_effect": 0.09184881153042895,
+          "hc3_se": 0.01894833208727691,
+          "p_value": 1.2513441564067567e-06,
+          "adj_pct_premium": 9.61990768909715,
+          "adj_pct_ci95_low": 5.623506830385172,
+          "adj_pct_ci95_high": 13.767517500274252
+        }
+      ]
+    },
+    "charts": [
+      "C:\\Users\\USER\\OneDrive - Cambodia Academy of Digital Technology\\Car_Sale_Analysis\\car_price_prediction\\Car_Sale_Analysis\\outputs\\advanced_analysis\\transmission_body_price_comparison.png",
+      "C:\\Users\\USER\\OneDrive - Cambodia Academy of Digital Technology\\Car_Sale_Analysis\\car_price_prediction\\Car_Sale_Analysis\\outputs\\advanced_analysis\\transmission_body_interaction.png"
+    ]
+  },
+  "analysis_3": {
+    "seller_summary": [
+      {
+        "seller_type": "Dealer",
+        "analysis_role": "Primary Comparison",
+        "count": 9446,
+        "share_pct": 62.02639700571279,
+        "mean_price": 870205.5896675842,
+        "median_price": 590000.0,
+        "std_price": 1023733.2117319708,
+        "p25_price": 411000.0,
+        "p75_price": 890000.0,
+        "median_age": 6.0,
+        "mean_age": 6.149375396993436,
+        "p25_age": 4.0,
+        "p75_age": 8.0,
+        "median_km": 50000.0,
+        "mean_km": 52477.64334109676,
+        "p25_km": 32000.0,
+        "p75_km": 68000.0,
+        "automatic_share_pct": 27.048486131695952,
+        "median_engine_cc": 1396.0,
+        "median_power_bhp": 88.76
+      },
+      {
+        "seller_type": "Individual",
+        "analysis_role": "Primary Comparison",
+        "count": 5610,
+        "share_pct": 36.83761244993105,
+        "mean_price": 619701.9385026738,
+        "median_price": 510000.0,
+        "std_price": 606082.4284873736,
+        "p25_price": 350000.0,
+        "p75_price": 730000.0,
+        "median_age": 5.0,
+        "mean_age": 5.9162210338680925,
+        "p25_age": 3.0,
+        "p75_age": 8.0,
+        "median_km": 50000.0,
+        "mean_km": 59672.26078431372,
+        "p25_km": 25742.0,
+        "p75_km": 80000.0,
+        "automatic_share_pct": 10.089126559714796,
+        "median_engine_cc": 1248.0,
+        "median_power_bhp": 82.0
+      },
+      {
+        "seller_type": "Trustmark Dealer",
+        "analysis_role": "Separate (Small Sample)",
+        "count": 173,
+        "share_pct": 1.1359905443561626,
+        "mean_price": 571959.5375722543,
+        "median_price": 540000.0,
+        "std_price": 226203.4574608151,
+        "p25_price": 410000.0,
+        "p75_price": 675000.0,
+        "median_age": 4.0,
+        "mean_age": 4.294797687861272,
+        "p25_age": 3.0,
+        "p75_age": 5.0,
+        "median_km": 28810.0,
+        "mean_km": 31338.658959537574,
+        "p25_km": 14971.0,
+        "p75_km": 45280.0,
+        "automatic_share_pct": 14.450867052023122,
+        "median_engine_cc": 1197.0,
+        "median_power_bhp": 81.83
+      }
+    ],
+    "dealer_vs_individual_raw": {
+      "dealer_median_inr": 590000.0,
+      "individual_median_inr": 510000.0,
+      "absolute_median_diff_inr": 80000.0,
+      "relative_listing_price_diff_pct": 15.686274509803933
+    },
+    "regression_full": {
+      "subset": "All records (n=15,229)",
+      "n_obs": 15229,
+      "r2": 0.9220185183808614,
+      "adj_r2": 0.9214978513851891,
+      "rmse_log": 0.19182645300136955,
+      "seller_coefficients_vs_individual": {
+        "Dealer": {
+          "coef": 0.0550412642578655,
+          "hc3_se": 0.003613708159104002,
+          "t_stat": 15.231242212850045,
+          "p_value": 2.193832597210988e-52,
+          "ci95_low": 0.04795852641538312,
+          "ci95_high": 0.06212400210034788,
+          "pct_diff_vs_individual": 5.658421293938254,
+          "pct_ci95_low": 4.912714335882429,
+          "pct_ci95_high": 6.409428647382875
+        },
+        "Trustmark Dealer": {
+          "coef": -0.028034071252959425,
+          "hc3_se": 0.011486825112395262,
+          "t_stat": -2.44054131395352,
+          "p_value": 0.014665268394326749,
+          "ci95_low": -0.0505478347699644,
+          "ci95_high": -0.005520307735954452,
+          "pct_diff_vs_individual": -2.764476312438091,
+          "pct_ci95_low": -4.929154933542024,
+          "pct_ci95_high": -0.5505098836010136
+        }
+      }
+    },
+    "regression_major_body_sensitivity": {
+      "subset": "Major known body types (n=9,817)",
+      "n_obs": 9817,
+      "r2": 0.9182728035040164,
+      "adj_r2": 0.9176604576819691,
+      "rmse_log": 0.19005063920489407,
+      "seller_coefficients_vs_individual": {
+        "Dealer": {
+          "coef": 0.05277909267687872,
+          "hc3_se": 0.004705166724947624,
+          "t_stat": 11.217263013664247,
+          "p_value": 3.3549345890359967e-29,
+          "ci95_low": 0.0435571353547251,
+          "ci95_high": 0.06200104999903234,
+          "pct_diff_vs_individual": 5.419673961524585,
+          "pct_ci95_low": 4.451967160912296,
+          "pct_ci95_high": 6.396346188805269
+        },
+        "Trustmark Dealer": {
+          "coef": -0.0021814696900933628,
+          "hc3_se": 0.019492467304554038,
+          "t_stat": -0.11191347180475734,
+          "p_value": 0.9108920147541768,
+          "ci95_low": -0.04038600357684382,
+          "ci95_high": 0.036023064196657094,
+          "pct_diff_vs_individual": -0.21790920143457404,
+          "pct_ci95_low": -3.958135743877411,
+          "pct_ci95_high": 3.6679756400963326
+        }
+      }
+    },
+    "charts": [
+      "C:\\Users\\USER\\OneDrive - Cambodia Academy of Digital Technology\\Car_Sale_Analysis\\car_price_prediction\\Car_Sale_Analysis\\outputs\\advanced_analysis\\seller_price_comparison.png",
+      "C:\\Users\\USER\\OneDrive - Cambodia Academy of Digital Technology\\Car_Sale_Analysis\\car_price_prediction\\Car_Sale_Analysis\\outputs\\advanced_analysis\\seller_vehicle_age_comparison.png",
+      "C:\\Users\\USER\\OneDrive - Cambodia Academy of Digital Technology\\Car_Sale_Analysis\\car_price_prediction\\Car_Sale_Analysis\\outputs\\advanced_analysis\\seller_mileage_comparison.png",
+      "C:\\Users\\USER\\OneDrive - Cambodia Academy of Digital Technology\\Car_Sale_Analysis\\car_price_prediction\\Car_Sale_Analysis\\outputs\\advanced_analysis\\seller_price_distribution.png"
+    ]
+  },
+  "analysis_4": {
+    "mann_whitney_dealer_vs_individual": {
+      "primary_price_test": {
+        "variable": "selling_price",
+        "label": "Listing Price (INR)",
+        "dealer_n": 9446,
+        "individual_n": 5610,
+        "dealer_median": 590000.0,
+        "individual_median": 510000.0,
+        "median_diff_dealer_minus_indiv": 80000.0,
+        "median_diff_ci95": [
+          65000.0,
+          98500.0
+        ],
+        "u_statistic": 31215900.5,
+        "p_value_raw": 7.578478646966445e-75,
+        "rank_biserial_r": 0.17813500739544752,
+        "p_value_holm": 2.2735435940899338e-74,
+        "significant_at_0_05": true
+      },
+      "all_seller_metric_tests": [
+        {
+          "variable": "selling_price",
+          "label": "Listing Price (INR)",
+          "dealer_n": 9446,
+          "individual_n": 5610,
+          "dealer_median": 590000.0,
+          "individual_median": 510000.0,
+          "median_diff_dealer_minus_indiv": 80000.0,
+          "median_diff_ci95": [
+            65000.0,
+            98500.0
+          ],
+          "u_statistic": 31215900.5,
+          "p_value_raw": 7.578478646966445e-75,
+          "rank_biserial_r": 0.17813500739544752,
+          "p_value_holm": 2.2735435940899338e-74,
+          "significant_at_0_05": true
+        },
+        {
+          "variable": "vehicle_age",
+          "label": "Vehicle Age (Years)",
+          "dealer_n": 9446,
+          "individual_n": 5610,
+          "dealer_median": 6.0,
+          "individual_median": 5.0,
+          "median_diff_dealer_minus_indiv": 1.0,
+          "median_diff_ci95": [
+            1.0,
+            1.0
+          ],
+          "u_statistic": 28624898.5,
+          "p_value_raw": 9.999733544623375e-17,
+          "rank_biserial_r": 0.08034669722218757,
+          "p_value_holm": 1.999946708924675e-16,
+          "significant_at_0_05": true
+        },
+        {
+          "variable": "km_driven",
+          "label": "Kilometers Driven",
+          "dealer_n": 9446,
+          "individual_n": 5610,
+          "dealer_median": 50000.0,
+          "individual_median": 50000.0,
+          "median_diff_dealer_minus_indiv": 0.0,
+          "median_diff_ci95": [
+            0.0,
+            1000.0
+          ],
+          "u_statistic": 25400045.5,
+          "p_value_raw": 2.130321649612784e-05,
+          "rank_biserial_r": -0.04136410247120037,
+          "p_value_holm": 2.130321649612784e-05,
+          "significant_at_0_05": true
+        }
+      ]
+    },
+    "kruskal_wallis_body_types": {
+      "n_total": 9817,
+      "k_groups": 4,
+      "df": 3,
+      "h_statistic": 3210.3155830193173,
+      "p_value": 0.0,
+      "epsilon_squared": 0.32684353235700775,
+      "significant_at_0_05": true,
+      "group_summary": [
+        {
+          "real_body_type": "Hatchback",
+          "count": 3601,
+          "median_price": 435000.0,
+          "mean_price": 458008.88642043876,
+          "p25_price": 319000.0,
+          "p75_price": 558000.0
+        },
+        {
+          "real_body_type": "Sedan",
+          "count": 2839,
+          "median_price": 625000.0,
+          "mean_price": 926857.3441352589,
+          "p25_price": 450000.0,
+          "p75_price": 950000.0
+        },
+        {
+          "real_body_type": "SUV",
+          "count": 2819,
+          "median_price": 880000.0,
+          "mean_price": 1120392.3377084073,
+          "p25_price": 635000.0,
+          "p75_price": 1225000.0
+        },
+        {
+          "real_body_type": "MUV",
+          "count": 558,
+          "median_price": 1077500.0,
+          "mean_price": 1180259.8566308243,
+          "p25_price": 722000.0,
+          "p75_price": 1643750.0
+        }
+      ],
+      "posthoc_holm": [
+        {
+          "group_1": "Hatchback",
+          "group_2": "Sedan",
+          "n_1": 3601,
+          "n_2": 2839,
+          "median_1": 435000.0,
+          "median_2": 625000.0,
+          "median_diff_g1_minus_g2": -190000.0,
+          "median_diff_ci95": [
+            -210000.0,
+            -163425.0000000004
+          ],
+          "u_statistic": 2738515.0,
+          "p_value_raw": 3.232794149354498e-225,
+          "rank_biserial_r": -0.46425687592748244,
+          "p_value_holm": 1.616397074677249e-224,
+          "significant_at_0_05": true
+        },
+        {
+          "group_1": "Hatchback",
+          "group_2": "SUV",
+          "n_1": 3601,
+          "n_2": 2819,
+          "median_1": 435000.0,
+          "median_2": 880000.0,
+          "median_diff_g1_minus_g2": -445000.0,
+          "median_diff_ci95": [
+            -466000.0,
+            -425000.0
+          ],
+          "u_statistic": 1236549.5,
+          "p_value_raw": 0.0,
+          "rank_biserial_r": -0.7563741852086927,
+          "p_value_holm": 0.0,
+          "significant_at_0_05": true
+        },
+        {
+          "group_1": "Hatchback",
+          "group_2": "MUV",
+          "n_1": 3601,
+          "n_2": 558,
+          "median_1": 435000.0,
+          "median_2": 1077500.0,
+          "median_diff_g1_minus_g2": -642500.0,
+          "median_diff_ci95": [
+            -736312.5,
+            -559237.5000000001
+          ],
+          "u_statistic": 160204.5,
+          "p_value_raw": 1.1354926304744692e-224,
+          "rank_biserial_r": -0.8405416058263385,
+          "p_value_holm": 4.541970521897877e-224,
+          "significant_at_0_05": true
+        },
+        {
+          "group_1": "Sedan",
+          "group_2": "SUV",
+          "n_1": 2839,
+          "n_2": 2819,
+          "median_1": 625000.0,
+          "median_2": 880000.0,
+          "median_diff_g1_minus_g2": -255000.0,
+          "median_diff_ci95": [
+            -285000.0,
+            -235000.0
+          ],
+          "u_statistic": 2791423.0,
+          "p_value_raw": 2.194563301955311e-86,
+          "rank_biserial_r": -0.3024181380785369,
+          "p_value_holm": 6.583689905865933e-86,
+          "significant_at_0_05": true
+        },
+        {
+          "group_1": "Sedan",
+          "group_2": "MUV",
+          "n_1": 2839,
+          "n_2": 558,
+          "median_1": 625000.0,
+          "median_2": 1077500.0,
+          "median_diff_g1_minus_g2": -452500.0,
+          "median_diff_ci95": [
+            -550000.0,
+            -370000.0
+          ],
+          "u_statistic": 449266.0,
+          "p_value_raw": 6.271865896032499e-59,
+          "rank_biserial_r": -0.43280295828330684,
+          "p_value_holm": 1.2543731792064998e-58,
+          "significant_at_0_05": true
+        },
+        {
+          "group_1": "SUV",
+          "group_2": "MUV",
+          "n_1": 2819,
+          "n_2": 558,
+          "median_1": 880000.0,
+          "median_2": 1077500.0,
+          "median_diff_g1_minus_g2": -197500.0,
+          "median_diff_ci95": [
+            -299525.0,
+            -110000.0
+          ],
+          "u_statistic": 637939.5,
+          "p_value_raw": 1.661247198795269e-12,
+          "rank_biserial_r": -0.18888914317972894,
+          "p_value_holm": 1.661247198795269e-12,
+          "significant_at_0_05": true
+        }
+      ]
+    },
+    "regression_hypothesis_tests": {
+      "major_body_model_n": 9817,
+      "major_body_model_r2": 0.9183358824597829,
+      "major_body_model_adj_r2": 0.9176986675795923,
+      "joint_tests": {
+        "seller_type_joint": {
+          "terms": [
+            "C(seller_type, Treatment(reference='Individual'))[T.Dealer]",
+            "C(seller_type, Treatment(reference='Individual'))[T.Trustmark Dealer]"
+          ],
+          "f_stat": 64.8405857540364,
+          "df_num": 2,
+          "df_denom": 9740,
+          "p_value": 1.061471770397683e-28,
+          "significant_at_0_05": true
+        },
+        "transmission_main_hatchback": {
+          "terms": [
+            "C(transmission_type, Treatment(reference='Manual'))[T.Automatic]"
+          ],
+          "f_stat": 187.98594326034356,
+          "df_num": 1,
+          "df_denom": 9740,
+          "p_value": 2.1629152833036673e-42,
+          "significant_at_0_05": true
+        },
+        "body_type_main_joint": {
+          "terms": [
+            "C(real_body_type, Treatment(reference='Hatchback'))[T.MUV]",
+            "C(real_body_type, Treatment(reference='Hatchback'))[T.SUV]",
+            "C(real_body_type, Treatment(reference='Hatchback'))[T.Sedan]"
+          ],
+          "f_stat": 1661.2432327604213,
+          "df_num": 3,
+          "df_denom": 9740,
+          "p_value": 0.0,
+          "significant_at_0_05": true
+        },
+        "transmission_x_body_interaction_joint": {
+          "terms": [
+            "C(transmission_type, Treatment(reference='Manual'))[T.Automatic]:C(real_body_type, Treatment(reference='Hatchback'))[T.MUV]",
+            "C(transmission_type, Treatment(reference='Manual'))[T.Automatic]:C(real_body_type, Treatment(reference='Hatchback'))[T.SUV]",
+            "C(transmission_type, Treatment(reference='Manual'))[T.Automatic]:C(real_body_type, Treatment(reference='Hatchback'))[T.Sedan]"
+          ],
+          "f_stat": 2.8612417368763183,
+          "df_num": 3,
+          "df_denom": 9740,
+          "p_value": 0.03542283453000713,
+          "significant_at_0_05": true
+        }
+      },
+      "individual_coefficients": {
+        "C(seller_type, Treatment(reference='Individual'))[T.Dealer]": {
+          "coef": 0.05285134512945677,
+          "hc3_se": 0.004704959962694639,
+          "t_stat": 11.23311261913217,
+          "p_value": 2.8042246339710405e-29,
+          "ci95_low": 0.043629793053872365,
+          "ci95_high": 0.06207289720504118,
+          "pct_effect": 5.427291066692219,
+          "pct_ci95_low": 4.459556676232634,
+          "pct_ci95_high": 6.403990743625143
+        },
+        "C(seller_type, Treatment(reference='Individual'))[T.Trustmark Dealer]": {
+          "coef": -0.0020031055522520547,
+          "hc3_se": 0.019562639619335062,
+          "t_stat": -0.10239444120170019,
+          "p_value": 0.9184435957610658,
+          "ci95_low": -0.04034517464868513,
+          "ci95_high": 0.03633896354418102,
+          "pct_effect": -0.20011006752088667,
+          "pct_ci95_low": -3.9542143774494165,
+          "pct_ci95_high": 3.7007294591428153
+        },
+        "C(transmission_type, Treatment(reference='Manual'))[T.Automatic]": {
+          "coef": 0.12974491286503675,
+          "hc3_se": 0.009462974085364149,
+          "t_stat": 13.710796594667414,
+          "p_value": 8.74919616213212e-43,
+          "ci95_low": 0.11119782447108717,
+          "ci95_high": 0.14829200125898634,
+          "pct_effect": 13.853791990342067,
+          "pct_ci95_low": 11.761597677670155,
+          "pct_ci95_high": 15.985152502611477
+        },
+        "C(real_body_type, Treatment(reference='Hatchback'))[T.MUV]": {
+          "coef": 0.8623389927167784,
+          "hc3_se": 0.016783668253100785,
+          "t_stat": 51.37964953266168,
+          "p_value": 0.0,
+          "ci95_low": 0.8294436074122326,
+          "ci95_high": 0.8952343780213242,
+          "pct_effect": 136.86945786923513,
+          "pct_ci95_low": 129.20431096243362,
+          "pct_ci95_high": 144.79094584072308
+        },
+        "C(real_body_type, Treatment(reference='Hatchback'))[T.SUV]": {
+          "coef": 1.7488369430911217,
+          "hc3_se": 0.03267463370604088,
+          "t_stat": 53.522771175482134,
+          "p_value": 0.0,
+          "ci95_low": 1.6847958378192431,
+          "ci95_high": 1.8128780483630003,
+          "pct_effect": 474.79136362265393,
+          "pct_ci95_low": 439.13501101844855,
+          "pct_ci95_high": 512.805892666994
+        },
+        "C(real_body_type, Treatment(reference='Hatchback'))[T.Sedan]": {
+          "coef": 1.276933047323801,
+          "hc3_se": 0.021714109549299896,
+          "t_stat": 58.80660426920301,
+          "p_value": 0.0,
+          "ci95_low": 1.234374174650816,
+          "ci95_high": 1.319491919996786,
+          "pct_effect": 258.56258998119984,
+          "pct_ci95_low": 243.62273694594765,
+          "pct_ci95_high": 274.1519902806951
+        },
+        "C(transmission_type, Treatment(reference='Manual'))[T.Automatic]:C(real_body_type, Treatment(reference='Hatchback'))[T.MUV]": {
+          "coef": -0.03789610131555199,
+          "hc3_se": 0.02083376222224417,
+          "t_stat": -1.8189754165040048,
+          "p_value": 0.06891518071613953,
+          "ci95_low": -0.07872952493362173,
+          "ci95_high": 0.002937322302517746,
+          "pct_effect": -3.718702930434825,
+          "pct_ci95_low": -7.571011199208099,
+          "pct_ci95_high": 0.2941640460577766
+        },
+        "C(transmission_type, Treatment(reference='Manual'))[T.Automatic]:C(real_body_type, Treatment(reference='Hatchback'))[T.SUV]": {
+          "coef": 0.00868708091874737,
+          "hc3_se": 0.015731818533783026,
+          "t_stat": 0.5521981390830593,
+          "p_value": 0.5808126092133115,
+          "ci95_low": -0.02214671681878708,
+          "ci95_high": 0.039520878656281816,
+          "pct_effect": 0.8724923106200322,
+          "pct_ci95_low": -2.1903278715887042,
+          "pct_ci95_high": 4.03122189794598
+        },
+        "C(transmission_type, Treatment(reference='Manual'))[T.Automatic]:C(real_body_type, Treatment(reference='Hatchback'))[T.Sedan]": {
+          "coef": 0.02552832578623543,
+          "hc3_se": 0.014436904701136035,
+          "t_stat": 1.7682686361590108,
+          "p_value": 0.07701600459022377,
+          "ci95_low": -0.0027674874762281913,
+          "ci95_high": 0.05382413904869905,
+          "pct_effect": 2.585696406397231,
+          "pct_ci95_low": -0.27636615130115505,
+          "pct_ci95_high": 5.529899994943022
+        }
+      },
+      "full_dataset_seller_effects_n15229": {
+        "Dealer": {
+          "coef": 0.05504126425047746,
+          "hc3_se": 0.0036137081591593144,
+          "t_stat": 15.231242210572463,
+          "p_value": 2.1938326736411756e-52,
+          "ci95_low": 0.04795852640788666,
+          "ci95_high": 0.06212400209306825,
+          "pct_effect": 5.658421293157634,
+          "pct_ci95_low": 4.912714335095947,
+          "pct_ci95_high": 6.409428646608251
+        },
+        "Trustmark Dealer": {
+          "coef": -0.02803407145020964,
+          "hc3_se": 0.011486825112079144,
+          "t_stat": -2.4405413311925495,
+          "p_value": 0.014665267694369747,
+          "ci95_low": -0.05054783496659503,
+          "ci95_high": -0.005520307933824249,
+          "pct_effect": -2.7644763316178267,
+          "pct_ci95_low": -4.929154952235859,
+          "pct_ci95_high": -0.5505099032790617
+        }
+      }
+    },
+    "charts": [
+      "C:\\Users\\USER\\OneDrive - Cambodia Academy of Digital Technology\\Car_Sale_Analysis\\car_price_prediction\\Car_Sale_Analysis\\outputs\\advanced_analysis\\statistical_test_summary.png"
+    ]
+  },
+  "validation_checks": {
+    "age_25_count_match": true,
+    "age_25_median_match": true,
+    "seller_relative_diff_match": true,
+    "major_body_rows_match": true,
+    "all_11_charts_valid": true
+  }
+}
