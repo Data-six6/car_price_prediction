@@ -25,3 +25,5 @@ outputs/figures/**/*.jpeg
 outputs/figures/**/*.pdf
 outputs/reports/*
 !outputs/reports/.gitkeep
+!outputs/reports/advanced_analysis_report.md
+!outputs/reports/advanced_analysis_metrics.json
