@@ -27,3 +27,5 @@ outputs/reports/*
 !outputs/reports/.gitkeep
 !outputs/reports/advanced_analysis_report.md
 !outputs/reports/advanced_analysis_metrics.json
+!outputs/reports/age_1_vs_2_metrics.json
+!outputs/reports/powerbi_dashboard_design_spec.md
