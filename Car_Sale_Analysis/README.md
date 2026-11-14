@@ -59,6 +59,17 @@ C:\Users\USER\anaconda3\python.exe advanced_analysis\scripts\run_all_analysis.py
 9. `seller_mileage_comparison.png` — Inventory `km_driven` distribution by seller type.
 10. `seller_price_distribution.png` — Log10 price density curves and luxury-tail boxplots across seller types.
 11. `statistical_test_summary.png` — Non-parametric test summary, rank-biserial effect sizes (`r_rb`), and HC3 joint Wald F-test summary.
+12. `age_1_vs_2_composition_comparison.png` — Deep-dive comparison of `vehicle_age == 1` (`n = 220`) vs. `vehicle_age == 2` (`n = 1,134`) across price tiers, Sedan/Dealer mix, model shifts, and engine/power specs (`advanced_analysis/scripts/age_1_vs_2_investigation.py`).
+13. `age_1_vs_2_regression_decomposition.png` — Same-model matched price check (`16` models) and nested HC3 regression showing the `+9.1%` raw median gap vanishing to `+0.29%` (`p = 0.860`).
+
+### Power BI Dashboard UI/UX Design Mockups (`outputs/dashboard_mockups/`)
+
+Generated via `advanced_analysis/scripts/generate_powerbi_mockups.py` (`1920 × 1080` widescreen `16:9`, documented in [`outputs/reports/powerbi_dashboard_design_spec.md`](outputs/reports/powerbi_dashboard_design_spec.md)):
+
+1. `dashboard_home.png` — **Page 1: Home (Executive Overview)** (6 KPIs, 4 core charts, 3-point Executive Insights panel).
+2. `dashboard_market_overview.png` — **Page 2: Market Overview** (4 dropdown slicers, 4 KPIs, 6 composition & pricing charts).
+3. `dashboard_vehicle_analysis.png` — **Page 3: Vehicle Analysis & Price Intelligence** (Age curve, YoY % change, dedicated `AGE 25 PRICE ANOMALY` warning card, Engine tiers, Mileage scatter, Transmission × Body Type).
+4. `dashboard_seller_insights.png` — **Page 4: Seller & Pricing Intelligence** (Dealer vs. Individual KPIs, price/age/km bars, summary card, log-price box plot, 100% stacked body & transmission splits).
 
 ### Limitations
 
